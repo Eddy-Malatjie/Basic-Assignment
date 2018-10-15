@@ -4,17 +4,17 @@ This is a software that converts txt file contents into Sql format
 
 Getting Started
 
-Prerequisites
+# Prerequisites
 You need to to have the following installed on your machine
 
 .NET Framework - avilable here:https://www.microsoft.com/net/download/dotnet-framework-runtime
 .NET Core SDK - available here:https://www.microsoft.com/net/download/thank-you/dotnet-sdk-2.1.403-windows-x64-installer
 .NET Core CLI - is installed with .NET Core SDK
 
-Installing
+# Installing
 If you need help installation and to the enviroment running - https://docs.microsoft.com/en-us/dotnet/core/tools/?tabs=netcore2x
 
-Running the software
+# Running the software
 
 Clone or Download the repository to your local machine-https://github.com/Eddy-Malatjie/Basic-Assignment.git
 
