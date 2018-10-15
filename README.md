@@ -22,7 +22,7 @@ You need to to have the following installed on your machine
 
 * Opening the command prompt
 
-* Insert the command - set path="pathToFramwork" - pathToframework = C:\Windows\Microsoft.NET\Framework\v4.0.30319
+* Insert the command - set path="C:\Windows\Microsoft.NET\Framework\v4.0.30319"
 
 * Navigate to the repository containing folder on your machine and into the directory "..\Basic-Assignment"
 
