@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace SqlFileGenerator
+namespace Basic_Assignment
 {
     class Program
     {
@@ -14,7 +14,7 @@ namespace SqlFileGenerator
             if (File.Exists(fileName))
             {
 
-                FileRead FR = new FileRead(fileName, idNum);
+                FileProccessor FR = new FileProccessor(fileName, idNum);
                 FR.Process();
             }
             else

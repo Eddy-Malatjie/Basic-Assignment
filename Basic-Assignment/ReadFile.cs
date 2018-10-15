@@ -1,84 +1,22 @@
 ﻿using System;
-using System.Text;
 using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SqlFileGenerator
+namespace Basic_Assignment
 {
-    class FileRead
+    class ReadFile
     {
-        private string _fileName;
-        private int _ID;
-        public FileRead(string fileName, int id)
+        private int ID;
+       public ReadFile(int id)
         {
-            _ID = id;
-            _fileName = fileName;
+            ID = id;
+            
         }
 
-        public void Process()
-        {
-            string fileType, fileText = "";
-            string outputFileName = "";
-            string SqlInsert = "insert into customers(id, first_name, last_name, gender, date_of_birth, marital_status)";
-            int pos;
-
-            pos = _fileName.IndexOf("_") + 1;
-            fileType = _fileName.Substring(pos, 1);
-
-            if (Int32.Parse(fileType) == 1)
-            {
-                pos = _fileName.IndexOf(".") + 1;
-                outputFileName = _fileName.Substring(0, pos) + "sql";
-                fileText = ReadTypeOne(_fileName, SqlInsert);
-                WriteToFile(fileText, outputFileName);
-
-            }
-
-            if (Int32.Parse(fileType) == 2)
-            {
-                pos = _fileName.IndexOf(".") + 1;
-                outputFileName = _fileName.Substring(0, pos) + "sql";
-                fileText = ReadTypeTwo(_fileName, SqlInsert);
-                WriteToFile(fileText, outputFileName);
-
-            }
-            if (Int32.Parse(fileType) == 3)
-            {
-
-                pos = _fileName.IndexOf(".") + 1;
-                outputFileName = _fileName.Substring(0, pos) + "sql";
-                fileText = ReadTypeThree(_fileName, SqlInsert);
-                WriteToFile(fileText, outputFileName);
-
-
-            }
-
-        }
-        private void WriteToFile(string textToWrite, string OutFileName)
-        {
-
-            try
-            {
-
-                if (File.Exists(OutFileName))
-                {
-                    File.Delete(OutFileName);
-                }
-
-
-                using (FileStream fs = File.Create(OutFileName))
-                {
-
-                    Byte[] fileContent = new UTF8Encoding(true).GetBytes(textToWrite);
-                    fs.Write(fileContent, 0, fileContent.Length);
-
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        private string ReadTypeOne(string fileName, string sqlInsert)
+        public string ReadTypeOne(string fileName, string sqlInsert)
         {
             string firstName = "", lastName = "", gender = "", DOB = "", maritalStatus = "", Result = "";
             int pos;
@@ -119,9 +57,9 @@ namespace SqlFileGenerator
                         }
 
 
-                        Result = " values(" + _ID + ",'" + firstName + "','" + lastName + "','" + gender + "','" + DOB + "'," + maritalStatus + ")";
+                        Result = " values(" + ID + ",'" + firstName + "','" + lastName + "','" + gender + "','" + DOB + "'," + maritalStatus + ")";
                         SqlString = SqlString + sqlInsert + Result + Environment.NewLine;
-                        _ID++;
+                        ID++;
                     }
                 }
 
@@ -132,7 +70,7 @@ namespace SqlFileGenerator
             }
             return SqlString;
         }
-        private string ReadTypeTwo(string fileName, string sqlInsert)
+        public string ReadTypeTwo(string fileName, string sqlInsert)
         {
             string firstName = "", lastName = "", gender = "", DOB = "", maritalStatus = "", Result = "";
             string SqlString = "";
@@ -194,9 +132,9 @@ namespace SqlFileGenerator
                         }
 
 
-                        Result = " values(" + _ID + ",'" + firstName + "','" + lastName + "','" + gender + "','" + DOB + "'," + maritalStatus + ")";
+                        Result = " values(" + ID + ",'" + firstName + "','" + lastName + "','" + gender + "','" + DOB + "'," + maritalStatus + ")";
                         SqlString = SqlString + sqlInsert + Result + Environment.NewLine;
-                        _ID++;
+                        ID++;
                     }
 
                 }
@@ -210,7 +148,7 @@ namespace SqlFileGenerator
 
             return SqlString;
         }
-        private string ReadTypeThree(string fileName, string sqlInsert)
+        public string ReadTypeThree(string fileName, string sqlInsert)
         {
             string firstName = "", lastName = "", gender = "", DOB = "", maritalStatus = "", Result = "";
             string SqlString = "";
@@ -285,9 +223,9 @@ namespace SqlFileGenerator
 
                             if (firstName != "" && lastName != "" && gender != "" && DOB != "" && maritalStatus != "")
                             {
-                                Result = " values(" + _ID + ",'" + firstName + "','" + lastName + "','" + gender + "','" + DOB + "'," + maritalStatus + ")";
+                                Result = " values(" + ID + ",'" + firstName + "','" + lastName + "','" + gender + "','" + DOB + "'," + maritalStatus + ")";
                                 SqlString = SqlString + sqlInsert + Result + Environment.NewLine;
-                                _ID++;
+                                ID++;
                             }
 
                         }
@@ -304,5 +242,4 @@ namespace SqlFileGenerator
             return SqlString;
         }
     }
-
 }
