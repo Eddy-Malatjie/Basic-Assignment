@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Basic_Assignment
+namespace Assignment
 {
     class Program
     {

@@ -5,18 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Basic_Assignment
+namespace Assignment
 {
-    class ReadFile
+   public static class ReadFile
     {
-        private int ID;
-       public ReadFile(int id)
-        {
-            ID = id;
-            
-        }
-
-        public string ReadTypeOne(string fileName, string sqlInsert)
+        public static string ReadTypeOne(string fileName, string sqlInsert, int ID)
         {
             string firstName = "", lastName = "", gender = "", DOB = "", maritalStatus = "", Result = "";
             int pos;
@@ -70,7 +63,7 @@ namespace Basic_Assignment
             }
             return SqlString;
         }
-        public string ReadTypeTwo(string fileName, string sqlInsert)
+        public static string ReadTypeTwo(string fileName, string sqlInsert, int ID)
         {
             string firstName = "", lastName = "", gender = "", DOB = "", maritalStatus = "", Result = "";
             string SqlString = "";
@@ -148,7 +141,7 @@ namespace Basic_Assignment
 
             return SqlString;
         }
-        public string ReadTypeThree(string fileName, string sqlInsert)
+        public static string ReadTypeThree(string fileName, string sqlInsert, int ID)
         {
             string firstName = "", lastName = "", gender = "", DOB = "", maritalStatus = "", Result = "";
             string SqlString = "";
@@ -241,5 +234,10 @@ namespace Basic_Assignment
 
             return SqlString;
         }
+        public static double Add(double x, double y)
+        {
+            return x + y;
+        }
+
     }
 }

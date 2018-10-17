@@ -2,7 +2,7 @@
 using System.Text;
 using System.IO;
 
-namespace Basic_Assignment
+namespace Assignment
 {
     class FileProccessor
     {
@@ -21,7 +21,7 @@ namespace Basic_Assignment
             string SqlInsert = "insert into customers(id, first_name, last_name, gender, date_of_birth, marital_status)";
             int pos;
 
-            ReadFile RF = new ReadFile(_ID);
+          //  ReadFile RF = new ReadFile(_ID);
             WriteFile WF = new WriteFile();
 
             pos = _fileName.IndexOf("_") + 1;
@@ -31,7 +31,7 @@ namespace Basic_Assignment
             {
                 pos = _fileName.IndexOf(".") + 1;
                 outputFileName = _fileName.Substring(0, pos) + "sql";
-                fileText = RF.ReadTypeOne(_fileName, SqlInsert);
+                fileText = ReadFile.ReadTypeOne(_fileName, SqlInsert,_ID);
                 WF.WriteToFile(fileText, outputFileName);
 
             }
@@ -40,7 +40,7 @@ namespace Basic_Assignment
             {
                 pos = _fileName.IndexOf(".") + 1;
                 outputFileName = _fileName.Substring(0, pos) + "sql";
-                fileText = RF.ReadTypeTwo(_fileName, SqlInsert);
+                fileText = ReadFile.ReadTypeTwo(_fileName, SqlInsert, _ID);
                 WF.WriteToFile(fileText, outputFileName);
 
             }
@@ -49,7 +49,7 @@ namespace Basic_Assignment
 
                 pos = _fileName.IndexOf(".") + 1;
                 outputFileName = _fileName.Substring(0, pos) + "sql";
-                fileText = RF.ReadTypeThree(_fileName, SqlInsert);
+                fileText = ReadFile.ReadTypeThree(_fileName, SqlInsert, _ID);
                 WF.WriteToFile(fileText, outputFileName);
 
 
