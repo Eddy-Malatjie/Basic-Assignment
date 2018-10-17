@@ -24,19 +24,18 @@ You need to to have the following installed on your machine
 * Open the command prompt
 * Navigate to "./BasicAssignment/" directory in the folder containing the project 
 * Run the command `dotnet` to test whether whether the .Net Core SDK installed properlly
-* To build the application run [dotnet build] .
+* To build the application run `dotnet build` .
 
 ##### To run the unit tests
 
 * Navigate to "./BasicAssignment/Assigment.tests/" 
-* Run the command 'dotnet test' to run all the unit test
+* Run the command `dotnet test` to run all the unit test
 
 ##### To run the program
 
 * Navigate to "./BasicAssignment/Assigment/" 
-* Run [set path="C:\Windows\Microsoft.NET\Framework\v4.0.30319"]
-* Run the command "[csc /out:MainProgram.exe \*.cs]" 
+* Run `set path="C:\Windows\Microsoft.NET\Framework\v4.0.30319"`
+* Run the command `csc /out:MainProgram.exe \*.cs` 
 * The command above creates an executable(.exe) file which will be used to run the program
-* Then to acquire the desired results run [MainProgram.exe "\filepath\<file_name>.txt" 400]
+* Then to acquire the desired results run `MainProgram.exe "\filepath\<file_name>.txt" 400`
 * Go the the file path of the input file to find the .sql file
-* [dotnet sln](../tools/dotnet-sln.md)
