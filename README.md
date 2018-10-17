@@ -27,7 +27,8 @@ You need to to have the following installed on your machine
 * To build the application run `dotnet build` .
 
 ##### To run the unit tests
-
+* Before you begin the test run locate the "Files" directory
+* Move the .txt files found in the "Files" directory to C: root folder
 * Navigate to "./BasicAssignment/Assigment.tests/" 
 * Run the command `dotnet test` to run all the unit test
 
