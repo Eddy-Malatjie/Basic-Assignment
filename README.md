@@ -23,7 +23,7 @@ You need to to have the following installed on your machine
 
 * Open the command prompt
 * Navigate to "./BasicAssignment/" directory in the folder containing the project 
-* Run the command [dotnet"] to test whether whether the .Net Core SDK installed properlly
+* Run the command [dotnet"](../tools/dotnet-new.md) to test whether whether the .Net Core SDK installed properlly
 * To build the application run [dotnet build] .
 
 ##### To run the unit tests
