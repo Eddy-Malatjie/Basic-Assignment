@@ -39,4 +39,4 @@ You need to to have the following installed on your machine
 * The command above creates an executable(.exe) file which will be used to run the program
 * Then to acquire the desired results run [MainProgram.exe "\filepath\<file_name>.txt" 400]
 * Go the the file path of the input file to find the .sql file
-*[dotnet sln](../tools/dotnet-sln.md)
+* [dotnet sln](../tools/dotnet-sln.md)
