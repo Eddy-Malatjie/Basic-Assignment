@@ -34,8 +34,6 @@ You need to to have the following installed on your machine
 ##### To run the program
 
 * Navigate to "./BasicAssignment/Assigment/" 
-* Run `set path="C:\Windows\Microsoft.NET\Framework\v4.0.30319"`
-* Run the command `csc /out:MainProgram.exe \*.cs` 
-* The command above creates an executable(.exe) file which will be used to run the program
-* Then to acquire the desired results run `MainProgram.exe "\filepath\<file_name>.txt" 400`
+* Run `dotnet build`
+* Then to acquire the desired results run `dotnet run "\filepath\<file_name>.txt" 400`
 * Go to the file path of the input file to find the generated .sql file
