@@ -29,7 +29,7 @@ You need to to have the following installed on your machine
 ##### To run the unit tests
 
 * Navigate to "./BasicAssignment/Assigment.tests/" 
-* Run the command [dotnet test] to run all the unit test
+* Run the command 'dotnet test' to run all the unit test
 
 ##### To run the program
 
